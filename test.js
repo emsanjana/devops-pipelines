@@ -6,10 +6,13 @@ console.log('Starting test...');
 const content = fs.readFileSync('index.js', 'utf8');
 
 // Check if it contains "shwetha"
-if (content.includes('Shwetha')) {
+if (content.includes('Shwetha'))
+{
     console.log('Test Passed: index.js contains "shwetha"');
     process.exit(0); // success
-} else {
+}
+else
+{
     console.log('Test Failed: index.js does not contain "shwetha"');
     process.exit(1); // fail CI
 }
