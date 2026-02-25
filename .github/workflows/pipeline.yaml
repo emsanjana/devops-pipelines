@@ -22,3 +22,6 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - name: Run QA Automation (Postman)
+        run: npm run qa
