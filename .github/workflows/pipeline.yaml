@@ -25,3 +25,9 @@ jobs:
 
       - name: Run QA Automation (Postman)
         run: npm run qa
+
+      - name: Build Docker Image
+        if: success()  # only if previous steps passed
+        run: |
+          docker build -t devops-pipelines:latest .
+          docker images
